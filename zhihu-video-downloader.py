@@ -74,16 +74,16 @@ def get(url: str) -> list:
 
     #再次去重
     tmp_set = set()
-    distince_data = []
+    distinct_data = []
     for x in data:
         if x['url'] in tmp_set:
             pass
         else:
-            distince_data.append(x) 
+            distinct_data.append(x) 
             tmp_set.add(x['url'])
     
-    print(f"该页面有 {len(distince_data)} 个视频")
-    return distince_data  
+    print(f"该页面有 {len(distinct_data)} 个视频")
+    return distinct_data  
 
 
 def download(
